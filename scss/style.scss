@@ -1,0 +1,72 @@
+$txt-yellow:#FFC452;
+$txt-orange:#E75C00;
+$txt-white:#ffffff;
+
+%flex-row-space{
+    // 專門被繼承的class
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header{
+    @extend %flex-row-space;
+}
+
+.intro-main-cont{
+    // 解決圖片無法包含header、圖片變大和為什摸有邊邊= =
+    background-image: url(/img/cover.jpg);
+    height: 80vh;
+}
+
+.intro-wrapper{
+    text-align: center;
+    align-items: center;
+}
+
+.txt-yellow{
+    color:$txt-yellow;
+}
+
+.txt-orange{
+    color:$txt-orange;
+}
+
+.txt-white{
+    color:$txt-white;
+}
+
+.intro-btn{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container{
+    @extend %flex-row-space;
+    gap: 5%;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
+}
+
+.accordion-container{
+    width: 80%;
+    margin: auto;
+}
+
+.accordion-item{
+    
+}
+
+footer{
+    @extend %flex-row-space;
+}
+
+
