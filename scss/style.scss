@@ -15,6 +15,7 @@ header{
 
 .intro-main-cont{
     // 解決圖片無法包含header、圖片變大和為什摸有邊邊= =
+    // 這種情況就是往上找是不是繼承到margin 或 padding 另外就是元素如果沒有指定其實會有預設值
     background-image: url(/img/cover.jpg);
     height: 80vh;
 }
