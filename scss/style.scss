@@ -1,23 +1,84 @@
 $txt-yellow:#FFC452;
 $txt-orange:#E75C00;
 $txt-white:#ffffff;
+$txt-gray:#636571;
+$main-color:#002F94;
+$second-color:#F1F8FF;
+$footer-btn-color:#6F6F6F;
+$font-display-large: 60px;
+$font-display-medium: 30px;
+$font-title: 24px;
+$font-subtitle: 20px;
+$font-body: 16px;
+$font-caption: 14px;
+$font-weight-bold: 700;
 
-%flex-row-space{
-    // 專門被繼承的class
+@mixin flex-row-space{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header{
-    @extend %flex-row-space;
+@mixin flex-row-between-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans TC', 'Roboto';
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+header{
+    @include flex-row-space;
+}
+
+ul {
+    list-style-position: inside;
+}
+
 
 .intro-main-cont{
     // 解決圖片無法包含header、圖片變大和為什摸有邊邊= =
     // 這種情況就是往上找是不是繼承到margin 或 padding 另外就是元素如果沒有指定其實會有預設值
     background-image: url(/img/cover.jpg);
     height: 80vh;
+    button{
+        background-color: $second-color;
+        color: $main-color;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover{
+            background-color: $main-color;
+            color: $second-color;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+    a{
+        color:white;
+        font-size: 12px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
 }
 
 .intro-wrapper{
@@ -37,24 +98,64 @@ header{
     color:$txt-white;
 }
 
+.txt-gray{
+    color:$txt-gray;
+}
+
+.font_large{
+    font-size: $font-display-large
+}
+
+.font_medium{
+    font-size: $font-display-medium;
+}
+
 .intro-btn{
     display: block;
     margin: 0 auto;
     text-align: center;
 }
 
-.cover{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.txt-bold{
+    font-weight:$font-weight-bold;
+}
+
+.accordion-container,.article_score_wrapper, .article_apply_wrapper, .accordion-container, .article_notice_wrapper{
+    width: 80%;
+    margin: auto;
+    padding: 36px;
+}
+
+.li_notice_padding{
+    padding: 16px 0;
+}
+
+.ul_notice_padding{
+    padding: 0 36px;
+}
+
+.article_score_title, .article_apply_title{
+    text-align: center;
 }
 
 .container{
-    @extend %flex-row-space;
+    @include flex-row-space;
     gap: 5%;
     align-items: flex-start;
     width: 80%;
     margin: auto;
+}
+
+.bg_shadow{
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(13, 64, 195, 0.1);
+}
+.bg-color-lightblud{
+    background-color: $second-color;
+}
+
+.bg-color-white{
+    background-color: white;
 }
 
 .accordion-container{
@@ -62,12 +163,43 @@ header{
     margin: auto;
 }
 
+.article_score_spacing{
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.section_spacing{
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
 .accordion-item{
     
 }
 
-footer{
-    @extend %flex-row-space;
+.footer_homepage_top{
+    @include flex-row-between-wrap;
+    button{
+        color: $footer-btn-color;
+        background: none;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+        font-size: $font-body;
+    }
+}
+
+.footer_copyright_bottom{
+    @include flex-row-between-wrap;
+    font-size: $font-caption;
+    button{
+        color: $footer-btn-color;
+        background: none;
+        padding: 8px 16px;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 
