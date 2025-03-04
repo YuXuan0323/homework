@@ -1,68 +1,16 @@
-$txt-yellow:#FFC452;
-$txt-orange:#E75C00;
-$txt-white:#ffffff;
-$txt-gray:#636571;
-$main-color:#002F94;
-$second-color:#F1F8FF;
-$footer-btn-color:#6F6F6F;
-$font-display-large: 60px;
-$font-display-medium: 30px;
-$font-title: 24px;
-$font-subtitle: 20px;
-$font-body: 16px;
-$font-caption: 14px;
-$font-weight-bold: 700;
-
-@mixin flex-row-space{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@mixin flex-row-between-wrap{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
-
-body{
-    font-family: 'Noto Sans TC', 'Roboto';
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 110px;
-}
-
-header{
-    @include flex-row-space;
-}
-
-ul {
-    list-style-position: inside;
-}
-
+@import "reset";
+@import "mixin";
+@import "color";
+@import "font";
 
 .intro-main-cont{
-    // 解決圖片無法包含header、圖片變大和為什摸有邊邊= =
-    // 這種情況就是往上找是不是繼承到margin 或 padding 另外就是元素如果沒有指定其實會有預設值
     background-image: url(/img/cover.jpg);
     height: 80vh;
     button{
         background-color: $second-color;
         color: $main-color;
         padding: 8px 16px;
-        border: none;
         border-radius: 4px;
-        cursor: pointer;
         &:hover{
             background-color: $main-color;
             color: $second-color;
@@ -182,10 +130,7 @@ ul {
     @include flex-row-between-wrap;
     button{
         color: $footer-btn-color;
-        background: none;
         padding: 8px 16px;
-        border: none;
-        cursor: pointer;
         font-size: $font-body;
     }
 }
@@ -195,10 +140,7 @@ ul {
     font-size: $font-caption;
     button{
         color: $footer-btn-color;
-        background: none;
         padding: 8px 16px;
-        border: none;
-        cursor: pointer;
     }
 }
 

@@ -1,0 +1,13 @@
+@mixin flex-row-space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-row-between-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
