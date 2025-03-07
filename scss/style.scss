@@ -4,8 +4,9 @@
 @import "font";
 
 .intro-main-cont{
-    background-image: url(/img/cover.jpg);
+    background: url(/img/cover.webp) no-repeat;
     height: 80vh;
+    background-size: cover;
     button{
         background-color: $second-color;
         color: $main-color;
@@ -86,12 +87,50 @@
     text-align: center;
 }
 
-.container{
+
+.intropage-header{
+    display: flex;
+    justify-content: space-between;
+}
+.intro-para-cont{
     @include flex-row-space;
     gap: 5%;
     align-items: flex-start;
     width: 80%;
     margin: auto;
+    
+    .intro-para-item{
+        flex: 1;
+    }
+    
+    .icon_ratio{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .intro_icon{
+        display: flex;
+        background: #F1F8FF;
+        width: 40px;
+        height: 40px;
+        padding: 15px;
+        margin: 0 auto;
+        border: 1px solid #98B3FF;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+.accordion-title{
+    padding: 20px;
+    background-color: $txt-white;
+}
+.accordion-item{
+    padding: 16px;
+    background-color: $txt-white;
 }
 
 .bg_shadow{
