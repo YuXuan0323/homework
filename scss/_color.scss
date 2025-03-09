@@ -1,7 +1,29 @@
 $txt-yellow:#FFC452;
 $txt-orange:#E75C00;
-$txt-white:#ffffff;
+$txt-white:#fff;
+$txt-lightblue:#F1F8FF;
+$bg-white:#fff;
 $txt-gray:#636571;
 $main-color:#002F94;
 $second-color:#F1F8FF;
 $footer-btn-color:#6F6F6F;
+
+.txt-yellow{
+    color:$txt-yellow;
+}
+
+.txt-orange{
+    color:$txt-orange;
+}
+
+.txt-white{
+    color:$txt-white;
+}
+
+.txt-lightblue{
+    color:$txt-lightblue;
+}
+
+.txt-gray{
+    color:$txt-gray;
+}

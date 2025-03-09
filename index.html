@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header class="intropage-header">
+    <header class="intro-header">
         <div class="header_title">
             成績與名次查詢網站
         </div>
@@ -20,16 +20,18 @@
     </header>
     <main>
         <section>
-            <div class="intro-main-cont">
-                <div class="intro-wrapper">
-                    <div>
+            <div class="intro_main_cont">
+                <div class="intro_wrapper">
+                    <div class="intro_title">
                         <h1 class="txt-yellow font_large">探索學分</h1>
                         <h2 class="txt-yellow font_large">讓你勇於嘗試跨領域學習</h2>
+                        <p class="txt-lightblue font_medium">提供外系課程成績彈性計算方式，減少成績因素影響跨域選課意願</p>
                     </div>
-                    <p class="txt-white font_medium">提供外系課程成績彈性計算方式，減少成績因素影響跨域選課意願</p>
-                    <button class="intro-btn">成績與名次查詢結果</button>
-                    <button class="intro-btn">不可申請探索學分查詢</button>
-                    <a class="intro-btn" href="#">注意事項</a>
+                    <div class="intro_btn_frame">
+                        <button class="intro_cta">成績與名次查詢結果</button>
+                        <button class="intro_cta">不可申請探索學分查詢</button>
+                        <a class="intro_ntc" href="#">注意事項</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -39,8 +41,8 @@
                     <div class="intro_icon">
                         <img class="icon_ratio" src="/img/icon_person.svg">
                     </div>
-                    <h1>課程範圍｜限外系課程</h1>
-                    <p>學生所屬學系與雙主修學系開設及設定
+                    <h1 class="intro_para_title">課程範圍｜限外系課程</h1>
+                    <p class="txt-gray font_subtitle">學生所屬學系與雙主修學系開設及設定
                         <span class="txt-orange">不得申請探索學分之課程</span>、共同必修、體育、進階英語、服務、全民國防課程及經本校核准出國修課之課程，不得申請為探索學分。
                     </p>
                 </div>
@@ -48,47 +50,46 @@
                     <div class="intro_icon">
                         <img class="icon_ratio" src="/img/icon_book.svg">
                     </div>
-                    <h1>適用對象｜大學部一年級及二年級</h1>
-                    <p>鼓勵大一及大二學生跨域學習，而大三以上學生朝專業領域發展</p>
+                    <h1 class="intro_para_title">適用對象｜大學部一年級及二年級</h1>
+                    <p class="txt-gray font_subtitle">鼓勵大一及大二學生跨域學習，而大三以上學生朝專業領域發展</p>
                 </div>
                 <div class="intro-para-item">
                     <div class="intro_icon">
                         <img class="icon_ratio" src="/img/icon_six.svg">
                     </div>
-                    <h1>適用對象｜大學部一年級及二年級</h1>
-                    <p>鼓勵大一及大二學生跨域學習，而大三以上學生朝專業領域發展</p>
+                    <h1 class="intro_para_title">適用對象｜大學部一年級及二年級</h1>
+                    <p class="txt-gray font_subtitle">鼓勵大一及大二學生跨域學習，而大三以上學生朝專業領域發展</p>
                 </div>
             </article>
         </section>
         <section class="section_spacing">
             <article class="article_score_wrapper bg_shadow">
-                <div class="article_score_title">
+                <div class="article_score_title font_title">
                     <h1>成績採計方式</h1>
                 </div>
-                <div class="article_score_spacing">
+                <div class="article_score_spacing font_subtitle">
                     <div>
                         <p class="txt-bold">通過（PASS）</p>
                     </div>
-                    <p>該科原始
+                    <p class="txt-gray">該科原始
                         <span class="span-highlight">成績及格</span>（C- 以上），成績考評改為
                         <span class="txt-orange">「通過」並取得學分</span>，不顯示原始成績亦不列入 GPA 計算
                     </p>
                     <div>
                         <p class="txt-bold">取消紀錄（NO RECORD）</p>
                     </div>
-                    <div>
-                        <p>該科原始
-                            <span class="txt-orange">成績不及格 </span>，取消學期成績紀錄，
-                            <span class="txt-orange">惟學期僅修習一科者</span>，不得申請
-                        </p>
-                    </div>
+                    <p class="txt-gray">該科原始
+                        <span class="txt-orange">成績不及格 </span>，取消學期成績紀錄，
+                        <span class="txt-orange">惟學期僅修習一科者</span>，不得申請
+                    </p>
+                    
                 </div>
             </article>
             <article class="article_apply_wrapper bg_shadow">
                 <div class="article_apply_title">
                     <h1>申請時間及方式</h1>
                 </div>
-                <ul>
+                <ul class="font_subtitle txt-gray">
                     <li>
                         <span class="txt-orange">本校行事曆規定之期末考結束後至次學期開學第一週期間</span>開放申請
                     </li>
@@ -96,12 +97,13 @@
                         <span class="txt-orange">成績不及格</span>，取消學期成績紀錄，
                         <span class="txt-orange">惟學期僅修習一科者，不得申請</span>
                     </li>
+                    <!-- ::mark? -->
                 </ul>
             </article>
         </section>
         <section class="bg-color-lightblud section_spacing">
             <article class="article_notice_wrapper">
-                <div>
+                <div class="article_notice_title">
                     <h1>探索注意事項</h1>
                 </div>
                 <ul class="txt-gray bg-color-white ul_notice_padding">

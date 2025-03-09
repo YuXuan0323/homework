@@ -1,7 +1,27 @@
-$font-display-large: 60px;
-$font-display-medium: 30px;
+$font-large: 60px;
+$font-medium: 30px;
 $font-title: 24px;
 $font-subtitle: 20px;
 $font-body: 16px;
 $font-caption: 14px;
 $font-weight-bold: 700;
+
+.font_large{
+    font-size: $font-large
+}
+
+.font_medium{
+    font-size: $font-medium;
+}
+
+.txt-bold{
+    font-weight:$font-weight-bold;
+}
+
+.font_title{ //24px
+    font-size: $font-title;
+}
+
+.font_subtitle{ //20px
+    font-size: $font-subtitle;
+}

@@ -3,10 +3,50 @@
 @import "color";
 @import "font";
 
-.intro-main-cont{
-    background: url(/img/cover.webp) no-repeat;
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
+}
+
+.intro-header{
+    width:100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 10px;
+
+    .header_title{
+        color: $txt-white;
+        font-size: $font-title;
+    }
+
+    .heade_localeEng{
+        color:$txt-white;
+    }
+}
+
+.intro_main_cont{
+    position: relative;
     height: 80vh;
-    background-size: cover;
+    padding-top: 60px;
+    background: linear-gradient(to bottom, #000, transparent);
+    //遮罩不確定484寫在這一層...
+    ::before{
+        content: "";
+        background: url(/img/cover.webp) no-repeat center center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        //沒有z-index:-1會被覆蓋，是哪一層覆蓋到before這層？
+    }
     button{
         background-color: $second-color;
         color: $main-color;
@@ -21,77 +61,97 @@
             cursor: pointer;
         }
     }
+
     a{
-        color:white;
+        color:$txt-white;
         font-size: 12px;
         &:hover{
             text-decoration: none;
         }
     }
+
+    .intro_wrapper{
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .intro_title{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .intro_btn_frame{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-bottom: 60px;
+        }
+
+        .intro_cta{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: $font-subtitle;
+            padding: 16px;
+            border-radius: 12px;
+        }
+
+        .intro_ntc{
+            font-size: $font-caption;
+            text-decoration: underline;
+        }
+    }
 }
 
-.intro-wrapper{
-    text-align: center;
-    align-items: center;
-}
-
-.txt-yellow{
-    color:$txt-yellow;
-}
-
-.txt-orange{
-    color:$txt-orange;
-}
-
-.txt-white{
-    color:$txt-white;
-}
-
-.txt-gray{
-    color:$txt-gray;
-}
-
-.font_large{
-    font-size: $font-display-large
-}
-
-.font_medium{
-    font-size: $font-display-medium;
-}
-
-.intro-btn{
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.txt-bold{
-    font-weight:$font-weight-bold;
-}
-
-.accordion-container,.article_score_wrapper, .article_apply_wrapper, .accordion-container, .article_notice_wrapper{
+.accordion-container,.article_score_wrapper, .accordion-container{
     width: 80%;
     margin: auto;
     padding: 36px;
 }
 
-.li_notice_padding{
-    padding: 16px 0;
+.article_apply_wrapper{
+    width: 80%;
+    margin: auto;
+    padding: 36px;
+    .article_apply_title{
+        font-size: $font-subtitle;
+        text-align: center;
+    }
+
+    li::before {
+        content: "•";
+        color: $txt-gray;
+        margin-right: 8px;
+        font-size: 32px;
+        //Line height affects vertical alignment?
+    }
 }
 
-.ul_notice_padding{
-    padding: 0 36px;
+.article_notice_wrapper{
+    width: 80%;
+    margin: auto;
+    padding: 36px;
+    .article_notice_title{
+        font-size: $font-subtitle;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .ul_notice_padding{
+        padding: 0 36px;
+    }
+    
+    .li_notice_padding{
+        padding: 16px 0;
+    }
 }
 
-.article_score_title, .article_apply_title{
-    text-align: center;
-}
 
-
-.intropage-header{
-    display: flex;
-    justify-content: space-between;
-}
 .intro-para-cont{
     @include flex-row-space;
     gap: 5%;
@@ -101,6 +161,12 @@
     
     .intro-para-item{
         flex: 1;
+        text-align: center;
+    }
+
+    .intro_para_title{
+        font-size: $font-title;
+        margin: 24px 0;
     }
     
     .icon_ratio{
@@ -112,12 +178,12 @@
     .intro_icon{
         display: flex;
         background: #F1F8FF;
-        width: 40px;
-        height: 40px;
+        width: 70px;
+        height: 70px;
         padding: 15px;
         margin: 0 auto;
         border: 1px solid #98B3FF;
-        border-radius: 4px;
+        border-radius: 12px;
         justify-content: center;
         align-items: center;
     }
@@ -128,13 +194,14 @@
     padding: 20px;
     background-color: $txt-white;
 }
+
 .accordion-item{
     padding: 16px;
     background-color: $txt-white;
 }
 
 .bg_shadow{
-    background-color: white;
+    background-color: $bg-white;
     box-shadow: 5px 5px 20px rgba(13, 64, 195, 0.1);
 }
 .bg-color-lightblud{
@@ -142,7 +209,7 @@
 }
 
 .bg-color-white{
-    background-color: white;
+    background-color: $bg-white;
 }
 
 .accordion-container{
@@ -160,9 +227,6 @@
     display: flex;
     flex-direction: column;
     gap: 110px;
-}
-.accordion-item{
-    
 }
 
 .footer_homepage_top{
