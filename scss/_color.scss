@@ -27,3 +27,11 @@ $footer-btn-color:#6F6F6F;
 .txt-gray{
     color:$txt-gray;
 }
+
+input[type='checkbox'] {
+    display: none;
+  
+    &:checked + label {
+      color: $txt-orange;
+    }
+}
