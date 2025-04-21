@@ -184,6 +184,7 @@ main{
     margin: auto;
     padding: 36px;
     .article_apply_title{
+        margin-bottom: 20px;
         font-size: $font-subtitle;
         text-align: center;
     }
@@ -192,7 +193,6 @@ main{
         content: "•";
         color: $txt-gray;
         margin-right: 8px;
-        font-size: 32px;
     }
 }
 
@@ -201,9 +201,9 @@ main{
     margin: auto;
     padding: 36px;
     .article_notice_title{
+        margin-bottom: 20px;
         font-size: $font-subtitle;
         justify-content: center;
-        text-align: center;
     }
 
 
@@ -213,8 +213,34 @@ main{
     
     .li_notice_padding{
         padding: 16px 0;
+        &::before{
+            content: "•";
+            color: $txt-gray;
+            margin-right: 8px;
+            //•為什摸這麼大顆= =?
+        }
     }
 }
+
+.cover{
+    width: 80%;
+    margin: auto;
+    padding: 36px;
+    font-size: $font-subtitle;
+    .article_score_title{
+        margin-bottom: 20px;
+    }
+    //toggle展開方向統一向下？
+    .qa_title_clicksarea{
+        padding: 16px;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        font-size: $font-subtitle;
+        background-color: $bg-white;
+    }
+}
+
 
 
 .intro-para-cont{
