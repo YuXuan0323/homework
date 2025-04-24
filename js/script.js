@@ -13,4 +13,5 @@ $(document).ready(function(){
             // label.removeClass("qa-title");
         }
     });
+    console.log("老大好優秀T_T")
 });
